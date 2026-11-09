@@ -19,7 +19,7 @@ Open http://127.0.0.1:5000
 - `static/style.css` - styling
 - `data.json` - stored data
 
-## REST API (test with Postman or curl)
+## APIs
 
 | Module | Routes |
 |---|---|
