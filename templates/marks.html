@@ -16,12 +16,12 @@
   <label>Exam
     <input name="exam" list="exam-list" required placeholder="e.g. Internal 1">
     <datalist id="exam-list">
-      <option value="Internal 1"><option value="Internal 2"><option value="Midterm"><option value="Final">
+      <option value="Internal 1"><option value="Mid Sem"></option><option value="Internal 2"><option value="End Sem">
     </datalist>
   </label>
   <label>Marks obtained<input name="marks" type="number" min="0" step="0.5" required></label>
   <label>Maximum marks<input name="max_marks" type="number" min="1" step="0.5" value="100"></label>
-  <div class="form-actions"><button type="submit">Save marks</button></div>
+  <div class="form-actions"><button type="submit">Add marks</button></div>
 </form>
 <p class="hint">Saving marks again for the same student, subject and exam updates the existing entry.</p>
 
@@ -37,8 +37,8 @@
   <label>Marks up to (%)<input type="number" name="max_percent" min="0" max="100" step="0.5" value="{{ max_percent }}" placeholder="100"></label>
   <button type="submit">Filter</button>
   {% if filter_label %}<a class="btn ghost" href="{{ url_for('page_marks') }}">Clear filter</a>{% endif %}
-  <span class="hint">
-    {% if filter_label %}Showing: {{ filter_label }}.{% else %}Tip: set "up to" to 49 to find failing marks.{% endif %}
+  <br><span class="hint">
+    {% if filter_label %}Showing: {{ filter_label }}{% endif %}
     The table, summary and chart all follow the filter.
   </span>
 </form>

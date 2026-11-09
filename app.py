@@ -77,6 +77,10 @@ def shift_day(day, days):
     return (datetime.strptime(day, DATE_FORMAT) + timedelta(days=days)).strftime(DATE_FORMAT)
 
 
+def day_name(day):
+    return datetime.strptime(day, DATE_FORMAT).strftime("%A")
+
+
 def year_choices(day):
     this_year = datetime.now().year
     years = set(range(this_year - 5, this_year + 2))
@@ -821,7 +825,7 @@ def page_attendance():
     status = {r["student_id"]: r["status"] for r in data["attendance"] if r["date"] == day}
     days_in_month = calendar.monthrange(int(day[6:]), int(day[3:5]))[1]
     return render_template(
-        "attendance.html", day=day, day_parts=day.split("-"), days=[f"{n:02d}" for n in range(1, days_in_month + 1)],
+        "attendance.html", day=day, day_name=day_name(day), day_parts=day.split("-"), days=[f"{n:02d}" for n in range(1, days_in_month + 1)],
         months=[f"{n:02d}" for n in range(1, 13)], years=year_choices(day),
         prev_day=shift_day(day, -1), next_day=shift_day(day, 1),
         department=department, departments=departments(data),

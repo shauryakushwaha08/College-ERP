@@ -24,9 +24,10 @@
   <button type="submit">Show</button>
   <a class="btn ghost" href="{{ url_for('page_attendance', date=prev_day, department=department) }}">&larr; Previous day</a>
   <a class="btn ghost" href="{{ url_for('page_attendance', date=next_day, department=department) }}">Next day &rarr;</a>
-  <span class="hint">Showing {{ day }}{% if department %}, {{ department }}{% endif %}. Mark each student below.</span>
 </form>
 
+<h3 style="margin-bottom: 2px;">{{ day_name }}, {{ day }}</h3>
+<span class="hint">{% if department %}{{ department }} department. {% endif %}Mark each student below.</span>
 <div class="card table-wrap">
   <table>
     <thead><tr><th>Roll no.</th><th>Name</th><th>Department</th><th>Status</th><th>Mark as</th></tr></thead>

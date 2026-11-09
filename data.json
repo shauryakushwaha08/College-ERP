@@ -229,6 +229,42 @@
       "student_id": 6,
       "date": "06-11-2026",
       "status": "Present"
+    },
+    {
+      "id": 66,
+      "student_id": 1,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 67,
+      "student_id": 2,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 68,
+      "student_id": 3,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 69,
+      "student_id": 4,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 70,
+      "student_id": 5,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 71,
+      "student_id": 6,
+      "date": "09-11-2026",
+      "status": "Present"
     }
   ],
   "marks": [
@@ -309,8 +345,8 @@
       "student_id": 5,
       "subject": "Mathematics",
       "exam": "Internal 1",
-      "marks": 14.0,
-      "max_marks": 50.0
+      "marks": 3.5,
+      "max_marks": 100.0
     },
     {
       "id": 47,
@@ -447,5 +483,5 @@
       "return_date": "03-11-2026"
     }
   ],
-  "next_id": 66
+  "next_id": 72
 }
