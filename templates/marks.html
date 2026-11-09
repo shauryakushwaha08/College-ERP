@@ -33,14 +33,21 @@
       {% for sub in subjects %}<option value="{{ sub }}" {{ 'selected' if sub == subject }}>{{ sub }}</option>{% endfor %}
     </select>
   </label>
+  <label>Exam
+    <select name="exam">
+      <option value="">All exams</option>
+      {% for e in exams %}<option value="{{ e }}" {{ 'selected' if e == exam }}>{{ e }}</option>{% endfor %}
+    </select>
+  </label>
   <label>Marks from (%)<input type="number" name="min_percent" min="0" max="100" step="0.5" value="{{ min_percent }}" placeholder="0"></label>
   <label>Marks up to (%)<input type="number" name="max_percent" min="0" max="100" step="0.5" value="{{ max_percent }}" placeholder="100"></label>
   <button type="submit">Filter</button>
   {% if filter_label %}<a class="btn ghost" href="{{ url_for('page_marks') }}">Clear filter</a>{% endif %}
-  <br><span class="hint">
+  
+  <div class="hint" style="width: 100%;">
     {% if filter_label %}Showing: {{ filter_label }}{% endif %}
     The table, summary and chart all follow the filter.
-  </span>
+  </div>
 </form>
 
 <div class="card table-wrap">
@@ -89,7 +96,7 @@
 <h3>Marks chart</h3>
 <div class="card chart-card">
   {% if has_chart %}
-    <img src="{{ url_for('marks_chart_image', subject=subject, min_percent=min_percent or None, max_percent=max_percent or None) }}" alt="Bar chart of each student's average marks percentage, with a 50% pass mark line">
+    <img src="{{ url_for('marks_chart_image', subject=subject, exam=exam, min_percent=min_percent or None, max_percent=max_percent or None) }}" alt="Bar chart of each student's average marks percentage, with a 50% pass mark line">
     <p class="hint">Green is 70% and above, amber is 50% to 69%, red is below the 50% pass mark. The chart updates whenever you save marks or change the filter.</p>
   {% elif filter_label %}
     <p class="empty-card">No marks match this filter, so there is nothing to chart.</p>

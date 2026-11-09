@@ -309,18 +309,20 @@ def percent_of(m):
     return m["marks"] * 100 / m["max_marks"]
 
 
-def subjects(data):
+def distinct(data, field):
     seen = {}
     for m in data["marks"]:
-        seen.setdefault(m["subject"].lower(), m["subject"])
+        seen.setdefault(m[field].lower(), m[field])
     return sorted(seen.values(), key=str.lower)
 
 
-def filter_marks(data, subject=None, low=None, high=None):
+def filter_marks(data, subject=None, exam=None, low=None, high=None):
     result = []
     for m in data["marks"]:
         percent = percent_of(m)
         if subject and m["subject"].lower() != subject.lower():
+            continue
+        if exam and m["exam"].lower() != exam.lower():
             continue
         if low is not None and percent < low:
             continue
@@ -330,10 +332,12 @@ def filter_marks(data, subject=None, low=None, high=None):
     return result
 
 
-def filter_label(subject, low, high):
+def filter_label(subject, exam, low, high):
     parts = []
     if subject:
         parts.append(subject)
+    if exam:
+        parts.append(exam)
     if low is not None and high is not None:
         parts.append(f"{low:g}% to {high:g}%")
     elif low is not None:
@@ -343,9 +347,9 @@ def filter_label(subject, low, high):
     return ", ".join(parts)
 
 
-def marks_with_students(data, subject=None, low=None, high=None):
+def marks_with_students(data, subject=None, exam=None, low=None, high=None):
     rows = []
-    for m in filter_marks(data, subject, low, high):
+    for m in filter_marks(data, subject, exam, low, high):
         s = find(data["students"], m["student_id"])
         percent = round(percent_of(m), 1)
         rows.append({**m, "student_name": s["name"], "roll_no": s["roll_no"],
@@ -354,8 +358,8 @@ def marks_with_students(data, subject=None, low=None, high=None):
     return rows
 
 
-def marks_summary(data, subject=None, low=None, high=None):
-    entries = filter_marks(data, subject, low, high)
+def marks_summary(data, subject=None, exam=None, low=None, high=None):
+    entries = filter_marks(data, subject, exam, low, high)
     rows = []
     for s in students_sorted(data):
         mine = [percent_of(m) for m in entries if m["student_id"] == s["id"]]
@@ -367,9 +371,9 @@ def marks_summary(data, subject=None, low=None, high=None):
     return rows
 
 
-def marks_chart_png(subject=None, low=None, high=None):
-    rows = marks_summary(load(), subject, low, high)
-    label = filter_label(subject, low, high)
+def marks_chart_png(subject=None, exam=None, low=None, high=None):
+    rows = marks_summary(load(), subject, exam, low, high)
+    label = filter_label(subject, exam, low, high)
     if not rows:
         raise NotFoundError("No marks match this filter, so there is nothing to chart." if label
                             else "No marks have been saved yet, so there is nothing to chart.")
@@ -602,7 +606,8 @@ def date_arg():
 
 
 def marks_filter_args():
-    return request.args.get("subject") or None, number_arg("min_percent"), number_arg("max_percent")
+    return (request.args.get("subject") or None, request.args.get("exam") or None,
+            number_arg("min_percent"), number_arg("max_percent"))
 
 
 # students
@@ -853,13 +858,13 @@ def page_marks():
     if request.method == "POST":
         return do(lambda: save_marks(request.form.to_dict()), "Marks saved.", "page_marks")
     data = load()
-    subject, low, high = marks_filter_args()
-    summary = marks_summary(data, subject, low, high)
+    subject, exam, low, high = marks_filter_args()
+    summary = marks_summary(data, subject, exam, low, high)
     return render_template(
-        "marks.html", students=students_sorted(data), subjects=subjects(data),
-        marks=marks_with_students(data, subject, low, high), summary=summary, has_chart=bool(summary),
-        subject=subject, min_percent=request.args.get("min_percent", ""),
-        max_percent=request.args.get("max_percent", ""), filter_label=filter_label(subject, low, high),
+        "marks.html", students=students_sorted(data), subjects=distinct(data, "subject"), exams=distinct(data, "exam"),
+        marks=marks_with_students(data, subject, exam, low, high), summary=summary, has_chart=bool(summary),
+        subject=subject, exam=exam, min_percent=request.args.get("min_percent", ""),
+        max_percent=request.args.get("max_percent", ""), filter_label=filter_label(subject, exam, low, high),
     )
 
 

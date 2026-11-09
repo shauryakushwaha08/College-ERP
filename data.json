@@ -363,6 +363,22 @@
       "exam": "Internal 1",
       "marks": 33.0,
       "max_marks": 50.0
+    },
+    {
+      "id": 72,
+      "student_id": 1,
+      "subject": "Mathematics",
+      "exam": "Mid Sem",
+      "marks": 26.0,
+      "max_marks": 100.0
+    },
+    {
+      "id": 73,
+      "student_id": 1,
+      "subject": "Mathematics",
+      "exam": "Internal 2",
+      "marks": 32.0,
+      "max_marks": 100.0
     }
   ],
   "fees": [
@@ -483,5 +499,5 @@
       "return_date": "03-11-2026"
     }
   ],
-  "next_id": 72
+  "next_id": 74
 }
