@@ -1,7 +1,6 @@
 # College ERP (Mini Project)
 
-Flask (Python) backend, HTML/CSS pages, and a JSON file for storage. No database, no JavaScript.
-Modules: Students (CRUD), Attendance, Marks, Fees, Library.
+Flask (Python) backend, HTML/CSS pages, and a JSON file for storage.
 
 ## Run
 
