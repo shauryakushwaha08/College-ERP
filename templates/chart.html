@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% set active_page = "page_attendance" %}
+{% block content %}
+<div class="page-head">
+  <h2>Attendance chart</h2>
+  <a class="btn ghost small" href="{{ url_for('page_attendance', department=department) }}">Back to attendance</a>
+</div>
+
+<form method="get" action="{{ url_for('page_attendance_chart') }}" class="card toolbar">
+  <label>Department
+    <select name="department">
+      <option value="">All departments</option>
+      {% for d in departments %}<option value="{{ d }}" {{ 'selected' if d == department }}>{{ d }}</option>{% endfor %}
+    </select>
+  </label>
+  <button type="submit">Show</button>
+</form>
+
+<div class="card chart-card">
+  {% if has_data %}
+    <img src="{{ url_for('attendance_chart_image', department=department) }}" alt="Bar chart of attendance percentage for each student, with a 75% minimum line">
+    <p class="hint">Green bars are at or above 75%. Red bars are below it.</p>
+  {% else %}
+    <p class="empty-card">No attendance has been marked{% if department %} for {{ department }}{% endif %} yet. Mark attendance first, then come back to see the chart.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% set active_page = "page_marks" %}
+{% block content %}
+<h2>Marks</h2>
+
+<form method="post" action="{{ url_for('page_marks') }}" class="card form-grid">
+  <label>Student
+    <select name="student_id" required>
+      {% for s in students %}<option value="{{ s.id }}">{{ s.roll_no }} - {{ s.name }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Subject
+    <input name="subject" list="subject-list" required placeholder="e.g. Python Programming">
+    <datalist id="subject-list">{% for sub in subjects %}<option value="{{ sub }}">{% endfor %}</datalist>
+  </label>
+  <label>Exam
+    <input name="exam" list="exam-list" required placeholder="e.g. Internal 1">
+    <datalist id="exam-list">
+      <option value="Internal 1"><option value="Internal 2"><option value="Midterm"><option value="Final">
+    </datalist>
+  </label>
+  <label>Marks obtained<input name="marks" type="number" min="0" step="0.5" required></label>
+  <label>Maximum marks<input name="max_marks" type="number" min="1" step="0.5" value="100"></label>
+  <div class="form-actions"><button type="submit">Save marks</button></div>
+</form>
+<p class="hint">Saving marks again for the same student, subject and exam updates the existing entry.</p>
+
+<h3>Filter</h3>
+<form method="get" action="{{ url_for('page_marks') }}" class="card toolbar">
+  <label>Subject
+    <select name="subject">
+      <option value="">All subjects</option>
+      {% for sub in subjects %}<option value="{{ sub }}" {{ 'selected' if sub == subject }}>{{ sub }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Marks from (%)<input type="number" name="min_percent" min="0" max="100" step="0.5" value="{{ min_percent }}" placeholder="0"></label>
+  <label>Marks up to (%)<input type="number" name="max_percent" min="0" max="100" step="0.5" value="{{ max_percent }}" placeholder="100"></label>
+  <button type="submit">Filter</button>
+  {% if filter_label %}<a class="btn ghost" href="{{ url_for('page_marks') }}">Clear filter</a>{% endif %}
+  <span class="hint">
+    {% if filter_label %}Showing: {{ filter_label }}.{% else %}Tip: set "up to" to 49 to find failing marks.{% endif %}
+    The table, summary and chart all follow the filter.
+  </span>
+</form>
+
+<div class="card table-wrap">
+  <table>
+    <thead><tr><th>Student</th><th>Subject</th><th>Exam</th><th>Marks</th><th>Percentage</th><th>Grade</th><th></th></tr></thead>
+    <tbody>
+    {% for m in marks %}
+      <tr>
+        <td>{{ m.student_name }} <span class="hint">{{ m.roll_no }}</span></td>
+        <td>{{ m.subject }}</td><td>{{ m.exam }}</td>
+        <td>{{ m.marks | num }} / {{ m.max_marks | num }}</td>
+        <td>{{ m.percent | num }}%</td>
+        <td><span class="badge {{ 'good' if m.percent >= 70 else ('warn' if m.percent >= 50 else 'bad') }}">{{ m.grade }}</span></td>
+        <td class="actions">
+          <form method="post" action="{{ url_for('page_marks_delete', mid=m.id) }}" class="inline">
+            <button class="danger small">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="7" class="empty">{% if filter_label %}No marks match this filter.{% else %}No marks yet. Add some using the form above.{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<h3>Result summary{% if filter_label %} ({{ filter_label }}){% endif %}</h3>
+<div class="card table-wrap">
+  <table>
+    <thead><tr><th>Roll no.</th><th>Name</th><th>Department</th><th>Entries</th><th>Average</th><th>Grade</th></tr></thead>
+    <tbody>
+    {% for r in summary %}
+      <tr>
+        <td>{{ r.roll_no }}</td><td>{{ r.name }}</td><td>{{ r.department or "" }}</td><td>{{ r.entries }}</td>
+        <td>{{ r.average | num }}%</td>
+        <td><span class="badge {{ 'good' if r.average >= 70 else ('warn' if r.average >= 50 else 'bad') }}">{{ r.grade }}</span></td>
+      </tr>
+    {% else %}
+      <tr><td colspan="6" class="empty">{% if filter_label %}No results match this filter.{% else %}No results to summarise yet.{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="hint">Grades: A+ 90 and above, A 80, B 70, C 60, D 50, F below 50.</p>
+
+<h3>Marks chart</h3>
+<div class="card chart-card">
+  {% if has_chart %}
+    <img src="{{ url_for('marks_chart_image', subject=subject, min_percent=min_percent or None, max_percent=max_percent or None) }}" alt="Bar chart of each student's average marks percentage, with a 50% pass mark line">
+    <p class="hint">Green is 70% and above, amber is 50% to 69%, red is below the 50% pass mark. The chart updates whenever you save marks or change the filter.</p>
+  {% elif filter_label %}
+    <p class="empty-card">No marks match this filter, so there is nothing to chart.</p>
+  {% else %}
+    <p class="empty-card">No marks yet. Save some marks above and the chart will appear here.</p>
+  {% endif %}
+</div>
+{% endblock %}

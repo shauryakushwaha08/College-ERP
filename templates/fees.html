@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% set active_page = "page_fees" %}
+{% block content %}
+<div class="page-head">
+  <h2>Fees</h2>
+  <a class="btn ghost small" href="{{ url_for('export_fees') }}">Export CSV</a>
+</div>
+
+<form method="post" action="{{ url_for('page_fees') }}" class="card form-grid">
+  <label>Student
+    <select name="student_id" required>
+      {% for s in students %}<option value="{{ s.id }}">{{ s.roll_no }} - {{ s.name }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Description<input name="description" required placeholder="e.g. Semester 3 tuition"></label>
+  <label>Amount<input name="amount" type="number" min="1" step="1" required></label>
+  <label>Due date (DD-MM-YYYY)<input name="due_date" placeholder="DD-MM-YYYY" pattern="\d{1,2}-\d{1,2}-\d{4}" title="Use DD-MM-YYYY, for example 25-12-2026"></label>
+  <div class="form-actions"><button type="submit">Add fee</button></div>
+</form>
+
+<div class="card table-wrap">
+  <table>
+    <thead><tr><th>Student</th><th>Description</th><th>Amount</th><th>Due</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+    {% for f in fees %}
+      <tr>
+        <td>{{ f.student_name }} <span class="hint">{{ f.roll_no }}</span></td>
+        <td>{{ f.description }}</td><td>{{ f.amount | money }}</td><td>{{ f.due_date or "-" }}</td>
+        <td><span class="badge {{ 'good' if f.status == 'Paid' else 'warn' }}">{{ f.status }}</span></td>
+        <td class="actions">
+          {% if f.status == "Pending" %}
+          <form method="post" action="{{ url_for('page_fee_pay', fid=f.id) }}" class="inline">
+            <button class="small">Mark paid</button>
+          </form>
+          {% endif %}
+          <form method="post" action="{{ url_for('page_fee_delete', fid=f.id) }}" class="inline">
+            <button class="danger small">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="6" class="empty">No fee records yet.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

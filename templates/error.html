@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Something went wrong</h2>
+<div class="card empty-card">
+  <p>{{ message }}</p>
+  <a class="btn" href="{{ url_for('page_students') }}">Back to students</a>
+</div>
+{% endblock %}

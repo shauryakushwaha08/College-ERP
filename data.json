@@ -1,0 +1,451 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "roll_no": "CS101",
+      "name": "Aarav Sharma",
+      "email": "aarav@college.edu",
+      "department": "CSE",
+      "year": 2
+    },
+    {
+      "id": 2,
+      "roll_no": "CS102",
+      "name": "Diya Patel",
+      "email": "diya@college.edu",
+      "department": "CSE",
+      "year": 2
+    },
+    {
+      "id": 3,
+      "roll_no": "CS103",
+      "name": "Rohan Mehta",
+      "email": "rohan@college.edu",
+      "department": "CSE",
+      "year": 3
+    },
+    {
+      "id": 4,
+      "roll_no": "EC101",
+      "name": "Ananya Iyer",
+      "email": "ananya@college.edu",
+      "department": "ECE",
+      "year": 3
+    },
+    {
+      "id": 5,
+      "roll_no": "EC102",
+      "name": "Kabir Singh",
+      "email": "kabir@college.edu",
+      "department": "ECE",
+      "year": 1
+    },
+    {
+      "id": 6,
+      "roll_no": "ME101",
+      "name": "Isha Verma",
+      "email": "isha@college.edu",
+      "department": "Mechanical",
+      "year": 1
+    }
+  ],
+  "attendance": [
+    {
+      "id": 7,
+      "student_id": 1,
+      "date": "02-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 8,
+      "student_id": 2,
+      "date": "02-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 9,
+      "student_id": 3,
+      "date": "02-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 10,
+      "student_id": 4,
+      "date": "02-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 11,
+      "student_id": 5,
+      "date": "02-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 12,
+      "student_id": 6,
+      "date": "02-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 13,
+      "student_id": 1,
+      "date": "03-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 14,
+      "student_id": 2,
+      "date": "03-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 15,
+      "student_id": 3,
+      "date": "03-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 16,
+      "student_id": 4,
+      "date": "03-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 17,
+      "student_id": 5,
+      "date": "03-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 18,
+      "student_id": 6,
+      "date": "03-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 19,
+      "student_id": 1,
+      "date": "04-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 20,
+      "student_id": 2,
+      "date": "04-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 21,
+      "student_id": 3,
+      "date": "04-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 22,
+      "student_id": 4,
+      "date": "04-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 23,
+      "student_id": 5,
+      "date": "04-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 24,
+      "student_id": 6,
+      "date": "04-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 25,
+      "student_id": 1,
+      "date": "05-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 26,
+      "student_id": 2,
+      "date": "05-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 27,
+      "student_id": 3,
+      "date": "05-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 28,
+      "student_id": 4,
+      "date": "05-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 29,
+      "student_id": 5,
+      "date": "05-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 30,
+      "student_id": 6,
+      "date": "05-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 31,
+      "student_id": 1,
+      "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 32,
+      "student_id": 2,
+      "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 33,
+      "student_id": 3,
+      "date": "06-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 34,
+      "student_id": 4,
+      "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 35,
+      "student_id": 5,
+      "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 36,
+      "student_id": 6,
+      "date": "06-11-2026",
+      "status": "Present"
+    }
+  ],
+  "marks": [
+    {
+      "id": 37,
+      "student_id": 1,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 46.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 38,
+      "student_id": 1,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 41.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 39,
+      "student_id": 2,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 44.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 40,
+      "student_id": 2,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 38.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 41,
+      "student_id": 3,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 35.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 42,
+      "student_id": 3,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 29.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 43,
+      "student_id": 4,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 42.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 44,
+      "student_id": 4,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 45.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 45,
+      "student_id": 5,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 31.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 46,
+      "student_id": 5,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 14.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 47,
+      "student_id": 6,
+      "subject": "Python Programming",
+      "exam": "Internal 1",
+      "marks": 27.0,
+      "max_marks": 50.0
+    },
+    {
+      "id": 48,
+      "student_id": 6,
+      "subject": "Mathematics",
+      "exam": "Internal 1",
+      "marks": 33.0,
+      "max_marks": 50.0
+    }
+  ],
+  "fees": [
+    {
+      "id": 49,
+      "student_id": 1,
+      "description": "Semester 3 tuition",
+      "amount": 45000.0,
+      "due_date": "19-10-2026",
+      "status": "Paid",
+      "paid_on": "19-10-2026"
+    },
+    {
+      "id": 50,
+      "student_id": 2,
+      "description": "Semester 3 tuition",
+      "amount": 45000.0,
+      "due_date": "22-11-2026",
+      "status": "Pending",
+      "paid_on": null
+    },
+    {
+      "id": 51,
+      "student_id": 3,
+      "description": "Exam fee",
+      "amount": 2500.0,
+      "due_date": "15-11-2026",
+      "status": "Pending",
+      "paid_on": null
+    },
+    {
+      "id": 52,
+      "student_id": 4,
+      "description": "Hostel fee",
+      "amount": 30000.0,
+      "due_date": "29-10-2026",
+      "status": "Paid",
+      "paid_on": "29-10-2026"
+    },
+    {
+      "id": 53,
+      "student_id": 5,
+      "description": "Semester 1 tuition",
+      "amount": 45000.0,
+      "due_date": "05-11-2026",
+      "status": "Pending",
+      "paid_on": null
+    },
+    {
+      "id": 54,
+      "student_id": 6,
+      "description": "Lab fee",
+      "amount": 5000.0,
+      "due_date": "24-10-2026",
+      "status": "Paid",
+      "paid_on": "24-10-2026"
+    }
+  ],
+  "books": [
+    {
+      "id": 55,
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "copies": 2
+    },
+    {
+      "id": 56,
+      "title": "Let Us C",
+      "author": "Yashavant Kanetkar",
+      "copies": 3
+    },
+    {
+      "id": 57,
+      "title": "Fluent Python",
+      "author": "Luciano Ramalho",
+      "copies": 1
+    },
+    {
+      "id": 58,
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "copies": 2
+    },
+    {
+      "id": 59,
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "copies": 2
+    }
+  ],
+  "issues": [
+    {
+      "id": 60,
+      "book_id": 56,
+      "student_id": 1,
+      "issue_date": "02-11-2026",
+      "return_date": null
+    },
+    {
+      "id": 61,
+      "book_id": 57,
+      "student_id": 2,
+      "issue_date": "04-11-2026",
+      "return_date": null
+    },
+    {
+      "id": 62,
+      "book_id": 55,
+      "student_id": 4,
+      "issue_date": "30-10-2026",
+      "return_date": null
+    },
+    {
+      "id": 63,
+      "book_id": 59,
+      "student_id": 3,
+      "issue_date": "27-10-2026",
+      "return_date": "03-11-2026"
+    }
+  ],
+  "next_id": 66
+}

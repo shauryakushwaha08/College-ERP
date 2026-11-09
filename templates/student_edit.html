@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% set active_page = "page_students" %}
+{% block content %}
+<h2>Edit student</h2>
+
+<form method="post" action="{{ url_for('page_student_edit', sid=s.id) }}" class="card form-grid">
+  <label>Roll number<input name="roll_no" value="{{ s.roll_no }}" required></label>
+  <label>Name<input name="name" value="{{ s.name }}" required></label>
+  <label>Email<input name="email" type="email" value="{{ s.email or '' }}"></label>
+  <label>Department<input name="department" value="{{ s.department or '' }}"></label>
+  <label>Year<input name="year" type="number" min="1" max="6" value="{{ s.year or '' }}"></label>
+  <div class="form-actions">
+    <button type="submit">Save changes</button>
+    <a class="btn ghost" href="{{ url_for('page_students') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}
