@@ -2,468 +2,391 @@
   "students": [
     {
       "id": 1,
-      "roll_no": "CS101",
+      "roll_no": "2026UCA1801",
       "name": "Aarav Sharma",
-      "email": "aarav@college.edu",
-      "department": "CSE",
-      "year": 2
+      "email": "aarav@nsut.ac.in",
+      "department": "CSAI",
+      "year": 1
     },
     {
       "id": 2,
-      "roll_no": "CS102",
+      "roll_no": "2026UCA1802",
       "name": "Diya Patel",
-      "email": "diya@college.edu",
-      "department": "CSE",
-      "year": 2
+      "email": "diya@nsut.ac.in",
+      "department": "CSAI",
+      "year": 1
     },
     {
       "id": 3,
-      "roll_no": "CS103",
+      "roll_no": "2025UCA1803",
       "name": "Rohan Mehta",
-      "email": "rohan@college.edu",
-      "department": "CSE",
-      "year": 3
+      "email": "rohan@nsut.ac.in",
+      "department": "CSAI",
+      "year": 2
     },
     {
       "id": 4,
-      "roll_no": "EC101",
+      "roll_no": "2024UEC1401",
       "name": "Ananya Iyer",
-      "email": "ananya@college.edu",
+      "email": "ananya@nsut.ac.in",
       "department": "ECE",
       "year": 3
     },
     {
       "id": 5,
-      "roll_no": "EC102",
+      "roll_no": "2026UEC1402",
       "name": "Kabir Singh",
-      "email": "kabir@college.edu",
+      "email": "kabir@nsut.ac.in",
       "department": "ECE",
       "year": 1
     },
     {
       "id": 6,
-      "roll_no": "ME101",
+      "roll_no": "2026UME1101",
       "name": "Isha Verma",
-      "email": "isha@college.edu",
+      "email": "isha@nsut.ac.in",
       "department": "Mechanical",
       "year": 1
     }
   ],
   "attendance": [
     {
-      "id": 7,
-      "student_id": 1,
-      "date": "02-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 8,
-      "student_id": 2,
-      "date": "02-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 9,
-      "student_id": 3,
-      "date": "02-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 10,
-      "student_id": 4,
-      "date": "02-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 11,
-      "student_id": 5,
-      "date": "02-11-2026",
-      "status": "Absent"
-    },
-    {
       "id": 12,
-      "student_id": 6,
-      "date": "02-11-2026",
+      "student_id": 4,
+      "date": "11-11-2026",
       "status": "Present"
     },
     {
       "id": 13,
-      "student_id": 1,
-      "date": "03-11-2026",
+      "student_id": 3,
+      "date": "11-11-2026",
       "status": "Present"
     },
     {
       "id": 14,
-      "student_id": 2,
-      "date": "03-11-2026",
+      "student_id": 1,
+      "date": "11-11-2026",
       "status": "Present"
     },
     {
       "id": 15,
-      "student_id": 3,
-      "date": "03-11-2026",
-      "status": "Absent"
+      "student_id": 2,
+      "date": "11-11-2026",
+      "status": "Present"
     },
     {
       "id": 16,
-      "student_id": 4,
-      "date": "03-11-2026",
-      "status": "Present"
+      "student_id": 5,
+      "date": "11-11-2026",
+      "status": "Absent"
     },
     {
       "id": 17,
-      "student_id": 5,
-      "date": "03-11-2026",
-      "status": "Present"
+      "student_id": 6,
+      "date": "11-11-2026",
+      "status": "Absent"
     },
     {
       "id": 18,
-      "student_id": 6,
-      "date": "03-11-2026",
+      "student_id": 4,
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
       "id": 19,
-      "student_id": 1,
-      "date": "04-11-2026",
+      "student_id": 3,
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
       "id": 20,
-      "student_id": 2,
-      "date": "04-11-2026",
+      "student_id": 1,
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
       "id": 21,
-      "student_id": 3,
-      "date": "04-11-2026",
+      "student_id": 2,
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
       "id": 22,
-      "student_id": 4,
-      "date": "04-11-2026",
+      "student_id": 5,
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
       "id": 23,
-      "student_id": 5,
-      "date": "04-11-2026",
-      "status": "Absent"
-    },
-    {
-      "id": 24,
       "student_id": 6,
-      "date": "04-11-2026",
-      "status": "Absent"
-    },
-    {
-      "id": 25,
-      "student_id": 1,
-      "date": "05-11-2026",
+      "date": "10-11-2026",
       "status": "Present"
     },
     {
-      "id": 26,
-      "student_id": 2,
-      "date": "05-11-2026",
+      "id": 24,
+      "student_id": 4,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 25,
+      "student_id": 3,
+      "date": "09-11-2026",
       "status": "Absent"
     },
     {
+      "id": 26,
+      "student_id": 1,
+      "date": "09-11-2026",
+      "status": "Present"
+    },
+    {
       "id": 27,
-      "student_id": 3,
-      "date": "05-11-2026",
+      "student_id": 2,
+      "date": "09-11-2026",
       "status": "Present"
     },
     {
       "id": 28,
-      "student_id": 4,
-      "date": "05-11-2026",
+      "student_id": 5,
+      "date": "09-11-2026",
       "status": "Present"
     },
     {
       "id": 29,
-      "student_id": 5,
-      "date": "05-11-2026",
+      "student_id": 6,
+      "date": "09-11-2026",
       "status": "Absent"
     },
     {
-      "id": 30,
+      "id": 51,
       "student_id": 6,
-      "date": "05-11-2026",
+      "date": "06-11-2026",
       "status": "Present"
     },
     {
-      "id": 31,
+      "id": 52,
+      "student_id": 5,
+      "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 53,
+      "student_id": 2,
+      "date": "06-11-2026",
+      "status": "Absent"
+    },
+    {
+      "id": 54,
       "student_id": 1,
       "date": "06-11-2026",
       "status": "Present"
     },
     {
-      "id": 32,
-      "student_id": 2,
+      "id": 55,
+      "student_id": 3,
       "date": "06-11-2026",
       "status": "Present"
     },
     {
-      "id": 33,
-      "student_id": 3,
+      "id": 56,
+      "student_id": 4,
       "date": "06-11-2026",
+      "status": "Present"
+    },
+    {
+      "id": 57,
+      "student_id": 2,
+      "date": "05-11-2026",
       "status": "Absent"
     },
     {
-      "id": 34,
-      "student_id": 4,
-      "date": "06-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 35,
+      "id": 58,
       "student_id": 5,
-      "date": "06-11-2026",
+      "date": "05-11-2026",
       "status": "Present"
     },
     {
-      "id": 36,
+      "id": 59,
       "student_id": 6,
-      "date": "06-11-2026",
-      "status": "Present"
+      "date": "05-11-2026",
+      "status": "Absent"
     },
     {
-      "id": 66,
+      "id": 60,
       "student_id": 1,
-      "date": "09-11-2026",
+      "date": "05-11-2026",
       "status": "Present"
     },
     {
-      "id": 67,
-      "student_id": 2,
-      "date": "09-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 68,
+      "id": 61,
       "student_id": 3,
-      "date": "09-11-2026",
+      "date": "05-11-2026",
       "status": "Present"
     },
     {
-      "id": 69,
+      "id": 62,
       "student_id": 4,
-      "date": "09-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 70,
-      "student_id": 5,
-      "date": "09-11-2026",
-      "status": "Present"
-    },
-    {
-      "id": 71,
-      "student_id": 6,
-      "date": "09-11-2026",
+      "date": "05-11-2026",
       "status": "Present"
     }
   ],
   "marks": [
     {
-      "id": 37,
-      "student_id": 1,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 46.0,
-      "max_marks": 50.0
-    },
-    {
-      "id": 38,
-      "student_id": 1,
-      "subject": "Mathematics",
-      "exam": "Internal 1",
-      "marks": 41.0,
-      "max_marks": 50.0
-    },
-    {
-      "id": 39,
-      "student_id": 2,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 44.0,
-      "max_marks": 50.0
-    },
-    {
-      "id": 40,
-      "student_id": 2,
-      "subject": "Mathematics",
-      "exam": "Internal 1",
-      "marks": 38.0,
-      "max_marks": 50.0
-    },
-    {
       "id": 41,
-      "student_id": 3,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 35.0,
-      "max_marks": 50.0
+      "student_id": 1,
+      "subject": "Computer Programming",
+      "exam": "Mid Sem",
+      "marks": 19.0,
+      "max_marks": 20.0
     },
     {
       "id": 42,
-      "student_id": 3,
-      "subject": "Mathematics",
+      "student_id": 1,
+      "subject": "Computer Programming",
       "exam": "Internal 1",
-      "marks": 29.0,
-      "max_marks": 50.0
+      "marks": 10.0,
+      "max_marks": 10.0
     },
     {
       "id": 43,
-      "student_id": 4,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 42.0,
-      "max_marks": 50.0
+      "student_id": 2,
+      "subject": "Maths",
+      "exam": "Mid Sem",
+      "marks": 15.0,
+      "max_marks": 20.0
     },
     {
       "id": 44,
-      "student_id": 4,
-      "subject": "Mathematics",
-      "exam": "Internal 1",
-      "marks": 45.0,
-      "max_marks": 50.0
+      "student_id": 5,
+      "subject": "ECE",
+      "exam": "Mid Sem",
+      "marks": 8.0,
+      "max_marks": 20.0
     },
     {
       "id": 45,
-      "student_id": 5,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 31.0,
-      "max_marks": 50.0
+      "student_id": 6,
+      "subject": "Mechanics",
+      "exam": "Mid Sem",
+      "marks": 15.0,
+      "max_marks": 20.0
     },
     {
       "id": 46,
-      "student_id": 5,
-      "subject": "Mathematics",
+      "student_id": 1,
+      "subject": "Maths",
       "exam": "Internal 1",
-      "marks": 3.5,
-      "max_marks": 100.0
+      "marks": 20.0,
+      "max_marks": 20.0
     },
     {
       "id": 47,
-      "student_id": 6,
-      "subject": "Python Programming",
-      "exam": "Internal 1",
-      "marks": 27.0,
-      "max_marks": 50.0
+      "student_id": 3,
+      "subject": "DBMS",
+      "exam": "Mid Sem",
+      "marks": 16.0,
+      "max_marks": 20.0
     },
     {
       "id": 48,
-      "student_id": 6,
-      "subject": "Mathematics",
-      "exam": "Internal 1",
-      "marks": 33.0,
-      "max_marks": 50.0
-    },
-    {
-      "id": 72,
-      "student_id": 1,
-      "subject": "Mathematics",
+      "student_id": 4,
+      "subject": "DBMS",
       "exam": "Mid Sem",
-      "marks": 26.0,
-      "max_marks": 100.0
+      "marks": 5.0,
+      "max_marks": 20.0
     },
     {
-      "id": 73,
+      "id": 49,
+      "student_id": 5,
+      "subject": "Maths",
+      "exam": "Mid Sem",
+      "marks": 10.0,
+      "max_marks": 20.0
+    },
+    {
+      "id": 50,
       "student_id": 1,
-      "subject": "Mathematics",
-      "exam": "Internal 2",
-      "marks": 32.0,
-      "max_marks": 100.0
+      "subject": "Physics",
+      "exam": "Mid Sem",
+      "marks": 13.0,
+      "max_marks": 20.0
     }
   ],
   "fees": [
     {
-      "id": 49,
-      "student_id": 1,
-      "description": "Semester 3 tuition",
-      "amount": 45000.0,
-      "due_date": "19-10-2026",
-      "status": "Paid",
-      "paid_on": "19-10-2026"
-    },
-    {
-      "id": 50,
-      "student_id": 2,
-      "description": "Semester 3 tuition",
-      "amount": 45000.0,
-      "due_date": "22-11-2026",
-      "status": "Pending",
-      "paid_on": null
-    },
-    {
-      "id": 51,
-      "student_id": 3,
-      "description": "Exam fee",
-      "amount": 2500.0,
-      "due_date": "15-11-2026",
-      "status": "Pending",
-      "paid_on": null
-    },
-    {
-      "id": 52,
+      "id": 35,
       "student_id": 4,
-      "description": "Hostel fee",
-      "amount": 30000.0,
-      "due_date": "29-10-2026",
-      "status": "Paid",
-      "paid_on": "29-10-2026"
-    },
-    {
-      "id": 53,
-      "student_id": 5,
-      "description": "Semester 1 tuition",
-      "amount": 45000.0,
-      "due_date": "05-11-2026",
+      "description": "Sem 7 tuition",
+      "amount": 85000.0,
+      "due_date": "25-12-2026",
       "status": "Pending",
       "paid_on": null
     },
     {
-      "id": 54,
-      "student_id": 6,
-      "description": "Lab fee",
-      "amount": 5000.0,
-      "due_date": "24-10-2026",
+      "id": 36,
+      "student_id": 1,
+      "description": "Sem 2 tuition",
+      "amount": 96000.0,
+      "due_date": "30-12-2026",
       "status": "Paid",
-      "paid_on": "24-10-2026"
+      "paid_on": "12-11-2026"
+    },
+    {
+      "id": 37,
+      "student_id": 3,
+      "description": "Sem 3 Tuition",
+      "amount": 75000.0,
+      "due_date": "25-12-2026",
+      "status": "Paid",
+      "paid_on": "12-11-2026"
+    },
+    {
+      "id": 39,
+      "student_id": 5,
+      "description": "Late Fee",
+      "amount": 5000.0,
+      "due_date": "20-12-2026",
+      "status": "Pending",
+      "paid_on": null
+    },
+    {
+      "id": 40,
+      "student_id": 2,
+      "description": "Sem 2 tuition",
+      "amount": 96000.0,
+      "due_date": "30-12-2026",
+      "status": "Pending",
+      "paid_on": null
     }
   ],
   "books": [
     {
-      "id": 55,
+      "id": 7,
       "title": "Introduction to Algorithms",
       "author": "Thomas H. Cormen",
       "copies": 2
     },
     {
-      "id": 56,
+      "id": 8,
       "title": "Let Us C",
       "author": "Yashavant Kanetkar",
       "copies": 3
     },
     {
-      "id": 57,
+      "id": 9,
       "title": "Fluent Python",
       "author": "Luciano Ramalho",
       "copies": 1
     },
     {
-      "id": 58,
+      "id": 10,
       "title": "Database System Concepts",
       "author": "Abraham Silberschatz",
       "copies": 2
     },
     {
-      "id": 59,
+      "id": 11,
       "title": "Computer Networks",
       "author": "Andrew S. Tanenbaum",
       "copies": 2
@@ -471,33 +394,40 @@
   ],
   "issues": [
     {
-      "id": 60,
-      "book_id": 56,
-      "student_id": 1,
-      "issue_date": "02-11-2026",
-      "return_date": null
-    },
-    {
-      "id": 61,
-      "book_id": 57,
-      "student_id": 2,
-      "issue_date": "04-11-2026",
-      "return_date": null
-    },
-    {
-      "id": 62,
-      "book_id": 55,
-      "student_id": 4,
-      "issue_date": "30-10-2026",
-      "return_date": null
-    },
-    {
-      "id": 63,
-      "book_id": 59,
+      "id": 30,
+      "book_id": 11,
       "student_id": 3,
-      "issue_date": "27-10-2026",
-      "return_date": "03-11-2026"
+      "issue_date": "12-11-2026",
+      "return_date": "12-11-2026"
+    },
+    {
+      "id": 31,
+      "book_id": 9,
+      "student_id": 1,
+      "issue_date": "12-11-2026",
+      "return_date": null
+    },
+    {
+      "id": 32,
+      "book_id": 8,
+      "student_id": 2,
+      "issue_date": "12-11-2026",
+      "return_date": "12-11-2026"
+    },
+    {
+      "id": 33,
+      "book_id": 7,
+      "student_id": 4,
+      "issue_date": "12-11-2026",
+      "return_date": null
+    },
+    {
+      "id": 34,
+      "book_id": 10,
+      "student_id": 5,
+      "issue_date": "12-11-2026",
+      "return_date": null
     }
   ],
-  "next_id": 74
+  "next_id": 63
 }
